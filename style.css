@@ -14,23 +14,18 @@ nav{
     justify-content: space-between;
     align-items: center;
     background: black;
-    padding: 15px 50px;
+    padding: 25px 50px;
 }
 
 .logo{
-    height: 50px;
+    font-size: 40px;
+    color: aliceblue;
 }
 
-.nav-links a{
+.nav-links li a{
     text-decoration: none;
     color: aliceblue;
     font-size: 18px;
     padding: 8px 15px;
     transition: 0.3s;
-}
-
-.nav-links a:hover{
-    background: aliceblue;
-    border-radius: 5px;
-    color: black;
 }
