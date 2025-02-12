@@ -8,3 +8,20 @@
 h1{
     margin-top: 10px;
 }
+
+.fixed-position{
+    position: fixed;
+    background-color: yellow;
+    text-align: center;
+    margin-top: -100px;
+    margin-left: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid 5px black;
+    width: 1600px;
+}
+
+.relative-model{
+    position: relative;
+    margin-top: 100px;
+}
