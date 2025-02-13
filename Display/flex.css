@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+nav{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    background-color: darkkhaki;
+    padding: 10px;
+
+}
+
+.link{
+    list-style-type: none;
+    
+}
+
+
+
+.flex-cont{
+    display: flex;
+    background-color: burlywood;
+    flex-direction: row;
+    /* flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    /* justify-content: end;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-around;
+    justify-content: space-between; */
+    /* justify-content: space-evenly; */
+/* 
+    align-items: stretch;
+    align-items: baseline;
+    align-items: normal; */
+
+    align-items: center;
+
+}
+
+.flex-cont div{
+    background-color: blue;
+    margin 10px;
+    padding: 20px;
+}
