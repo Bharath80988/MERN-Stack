@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+    <title>Flex</title>
     <link rel="stylesheet" href="flex.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <li><a href="#" class="link">Home</a></li>
-            <li><a href="#" class="link">About</a></li>
-            <li><a href="#" class="link">Skills</a></li>
-            <li><a href="#" class="link">Education</a></li>
-            <li><a href="#" class="link">Contact</a></li>
-            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown"><a href="#">Skills ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Technical</a></li>
+                    <li><a href="#">Functional</a></li>
+                    <li><a href="#">Non-Technical</a></li>
+                </ul></li>  
+                <li><a href="#" >Education</a></li>
+                <li><a href="#" >Contact</a></li>
+            </ul>
         </nav>
     </header>
-
-    <div class="flex-cont">
-        <div>Hello</div>
-        <div>This</div>
-        <div>is</div>
-        <div>Flexbox</div>
-    </div>
 </body>
+
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Transitions</title>
+    <link rel="stylesheet" href="trani.css">
+    <style>
+        .Transition{
+            color: dimgray;
+            background-color: beige;
+            transition: background-color 5s,width 5s,height 5s;
+        }
+        .Transition:hover{
+            background-color: dimgray;
+            color: beige;
+            padding: 30px;
+            height: 100px;
+            width: 300px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="Transition">This is a Transition Example</h1>
+</body>
+</html>
