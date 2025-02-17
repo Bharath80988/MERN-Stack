@@ -14,15 +14,24 @@ set.add("Hi")
 // console.log(set);
 
 // Logical AND Operator
-console.log(5 && 10)
-console.log(true && 10)
-console.log(false && 10)
-console.log(false && true)
-console.log(true&&false)
+// console.log(5 && 10)
+// console.log(true && 10)
+// console.log(false && 10)
+// console.log(false && true)
+// console.log(true&&false)
 
 // Logical OR Operator
-console.log(5 || 10)
-console.log(true || 10)
-console.log(false || 10)
-console.log(false || true)
-console.log(true || false)
+// console.log(5 || 10)
+// console.log(true || 10)
+// console.log(false || 10)
+// console.log(false || true)
+// console.log(true || false)
+
+Array = [10,20,30,"abc",true,"hello",[10,20,30]]
+for(i in Array){
+    console.log(Array[i]);
+}
+
+var testArrowFunction = () => {
+    console.log("This is the test arrow Function")
+}
