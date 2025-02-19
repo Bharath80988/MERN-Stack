@@ -1,7 +1,17 @@
-function home(){
+function home(properties){
+    var styling = {
+        textAlign:"center",
+        backgroundColor:"blue",
+        color:"white"
+    }
+
+    var a=10
+
     return(
         <div>
-            <h1>Home Page</h1>
+            <h1 style={styling}>Home Page</h1>
+            <h2>Below tag is for props</h2>
+            <h3>Props: {properties.properties} {properties.sjit}</h3>
         </div>
     )
 }
