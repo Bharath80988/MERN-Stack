@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../css/signup.css'
 
 const Signup = ()=>{
@@ -50,6 +51,7 @@ const Signup = ()=>{
 
             <button type="submit">Sign Up</button>
         </form>
+        <p>Aleready Have an account ? <Link to='/login'>Login</Link></p>
         </div>
     )
 }

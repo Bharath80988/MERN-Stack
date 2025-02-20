@@ -9,8 +9,14 @@ import Gallery from './Components/Functionalcomponents/gallery.jsx'
 import Signup from './Components/Functionalcomponents/signup.jsx'
 import Login from './Components/Functionalcomponents/login.jsx'
 import Navbar from './Components/Functionalcomponents/navbar.jsx'
+import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
+import UseEffect from './Components/Hooks/useeffect.jsx'
+import UseState from './Components/Hooks/usestate.jsx'
+import UseRef from './Components/Hooks/useRef.jsx'
+import UseMemo from './Components/Hooks/usememo.jsx'
 
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
+// import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -26,7 +32,13 @@ function App() {
           <Route path='/About' element = {<About/>}></Route>
           <Route path='/Contact' element = {<Contact/>}></Route>
           <Route path='/Gallery' element = {<Gallery/>}></Route>
+          <Route path='/UseEffectAPI' element = {<UseEffectAPI/>}></Route>
           <Route path='/Signup' element = {<Signup/>}></Route>
+          <Route path='/login' element = {<Login />}></Route>
+          <Route path='/UseEffect' element = {<UseEffect />}></Route>
+          <Route path='/UseState' element = {<UseState />}></Route>
+          <Route path='/UseRef' element = {<UseRef />}></Route>
+          <Route path='/UseMemo' element = {<UseMemo />}></Route>
         </Routes>
       </BrowserRouter>
     </main>

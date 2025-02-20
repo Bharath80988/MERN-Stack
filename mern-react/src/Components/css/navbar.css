@@ -23,17 +23,17 @@ a{
 }
 a:hover{
     background-color: aliceblue;
-    color: #493D9E;
+    color: blue;
 }
 .dropdown-menu{
     display: none;
     position: absolute;
-    background-color: #493D9E;
+    background-color: blue;
     padding: 20px;
-    /* top: 100%; */
-    /* left: 0; */
-    min-width: 150px;
-    border-radius: 5px;
+    top: 100%;
+    left: 0;
+     min-width: 150px;
+    border-radius: 5px; 
 }
 .dropdown-menu li{
     display: block;
@@ -44,8 +44,8 @@ a:hover{
     text-decoration: none;
 }
 .dropdown-menu li a:hover{
-    color:#493D9E;
-    background-color: white;
+    color:blue;
+    background-color: white; 
 }
 .dropdown:hover .dropdown-menu{
     display: block;
