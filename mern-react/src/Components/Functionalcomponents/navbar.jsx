@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../css/Navbar.css'
+import '../css/navbar.css'
 // import UseEffect from './Hooks/UseEffect.jsx'
 import { useState } from 'react';
 
