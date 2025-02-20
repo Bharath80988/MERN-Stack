@@ -1,3 +1,5 @@
+// import Navbar from "./navbar";
+
 function home(properties){
     var styling = {
         textAlign:"center",
@@ -9,6 +11,7 @@ function home(properties){
 
     return(
         <div>
+            {/* <Navbar /> */}
             <h1 style={styling}>Home Page</h1>
             <h2>Below tag is for props</h2>
             <h3>Props: {properties.properties} {properties.sjit}</h3>
