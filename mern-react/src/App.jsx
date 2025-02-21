@@ -14,6 +14,9 @@ import UseEffect from './Components/Hooks/useeffect.jsx'
 import UseState from './Components/Hooks/usestate.jsx'
 import UseRef from './Components/Hooks/useRef.jsx'
 import UseMemo from './Components/Hooks/usememo.jsx'
+import UseCallBack from './Components/Hooks/usecallback.jsx'
+import UseMemoize from './Components/Hooks/usememoize.jsx'
+import HoC from './Components/Hooks/Hoc/HoC.jsx'
 
 import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
 // import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
@@ -39,6 +42,9 @@ function App() {
           <Route path='/UseState' element = {<UseState />}></Route>
           <Route path='/UseRef' element = {<UseRef />}></Route>
           <Route path='/UseMemo' element = {<UseMemo />}></Route>
+          <Route path='/UseCallBack' element = {<UseCallBack />}></Route>
+          <Route path='/UseMemoize' element = {<UseMemoize />}></Route>
+          <Route path='/HoC' element = {<HoC />}></Route>
         </Routes>
       </BrowserRouter>
     </main>
