@@ -17,6 +17,8 @@ import UseMemo from './Components/Hooks/usememo.jsx'
 import UseCallBack from './Components/Hooks/usecallback.jsx'
 import UseMemoize from './Components/Hooks/usememoize.jsx'
 import HoC from './Components/Hooks/Hoc/HoC.jsx'
+import Memo from './Components/Memoization/memo.jsx'
+import LazyLoading from './Components/Memoization/lazyloading.jsx'
 
 import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
 // import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
@@ -45,6 +47,9 @@ function App() {
           <Route path='/UseCallBack' element = {<UseCallBack />}></Route>
           <Route path='/UseMemoize' element = {<UseMemoize />}></Route>
           <Route path='/HoC' element = {<HoC />}></Route>
+          <Route path='/Memo' element = {<Memo />}></Route>
+          <Route path='/LazyLoading' element = {<LazyLoading />}></Route>
+
         </Routes>
       </BrowserRouter>
     </main>

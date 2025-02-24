@@ -1,3 +1,7 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
 nav ul{
     display: flex;
     list-style-type: none;
@@ -5,7 +9,11 @@ nav ul{
     color: aliceblue;
     justify-content: space-around;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+nav{
+    width: 100%;
 }
 nav ul li{
     position: relative;

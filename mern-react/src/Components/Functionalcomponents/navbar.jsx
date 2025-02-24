@@ -25,6 +25,14 @@ const Navbar = () =>{
                 </ul>)}
                 </li>
                 </div>
+                <div class ="dropdown" onClick={()=>showDropdown(!dropdown)}>
+                <li><Link><a>Memoisation</a></Link>
+                {dropdown && (<ul class="dropdown-menu">
+                    <li><Link to='/Memo'>Memo</Link></li>
+                    <li><Link to='/LazyLoading'>LazyLoading</Link></li>
+                </ul>)}
+                </li>
+                </div>
                 <li><Link to='/hoc'>HOC's</Link></li>
                 <li><Link to='/Contact'>Contact</Link></li>
                 <li><Link to='/Login'>Login</Link></li>
