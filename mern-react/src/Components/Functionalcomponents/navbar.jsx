@@ -34,6 +34,7 @@ const Navbar = () =>{
                 </li>
                 </div>
                 <li><Link to='/hoc'>HOC's</Link></li>
+                <li><Link to='/CoE'>Prop Drilling</Link></li>
                 <li><Link to='/Contact'>Contact</Link></li>
                 <li><Link to='/Login'>Login</Link></li>
                 </ul>

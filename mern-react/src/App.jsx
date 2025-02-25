@@ -19,8 +19,10 @@ import UseMemoize from './Components/Hooks/usememoize.jsx'
 import HoC from './Components/Hooks/Hoc/HoC.jsx'
 import Memo from './Components/Memoization/memo.jsx'
 import LazyLoading from './Components/Memoization/lazyloading.jsx'
+import CoE from './Components/ContextAPI/CoE.jsx'
 
 import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
+import StudentResults from './Components/ContextAPI/Student.jsx'
 // import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
 
 function App() {
@@ -49,6 +51,7 @@ function App() {
           <Route path='/HoC' element = {<HoC />}></Route>
           <Route path='/Memo' element = {<Memo />}></Route>
           <Route path='/LazyLoading' element = {<LazyLoading />}></Route>
+          <Route path='/CoE' element = {<CoE />}></Route>
 
         </Routes>
       </BrowserRouter>
