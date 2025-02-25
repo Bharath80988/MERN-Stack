@@ -22,7 +22,7 @@ import LazyLoading from './Components/Memoization/lazyloading.jsx'
 import CoE from './Components/ContextAPI/CoE.jsx'
 
 import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
-import StudentResults from './Components/ContextAPI/Student.jsx'
+// import StudentResults from './Components/ContextAPI/Student.jsx'
 // import UseEffectAPI from './Components/Hooks/useEffectapi.jsx'
 
 function App() {
