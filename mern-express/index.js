@@ -1,46 +1,51 @@
 const express = require("express");
 const mdb = require("mongoose");
 const dotenv = require("dotenv");
-const Signup = require("./Models/signupSchema");
-
-
+const bcrypt = require("bcrypt");
+const Signup = require("./Models/signupSchema.js");
 const app = express();
 app.use(express.json());
 const PORT = 3001;
 dotenv.config();
 
-// console.log("mongodb+srv://admin:Bharath@2005@mernbharath.mhkgb.mongodb.net/")
-
 mdb
-  .connect(process.env.MONGODB_URL)
+  .connect(process.env.MONGODB_URL) 
   .then(() => {
-    console.log("Mongo DB connection successfull");
+    console.log("MDB Connection Successful");
   })
   .catch((err) => {
-    console.log("Check your connection string", err);
+    console.log("Check your connection String", err);
   });
 
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Backend</h1>");
+});
 app.get("/static", (req, res) => {
-  res.sendFile("D:\\MERN_Stack\\HTML_CSS\\index.html");
+  res.sendFile(
+    "/Users/prasanthksp/Documents/RAMPeX-Parent-Folder/Trainings/SJIT2025MERN/HTML_CSS/index.html"
+  );
 });
 
-app.post("/signup", (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
+    console.log(req.body);
     const { firstName, lastName, email, password, phoneNumber } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newSignup = new Signup({
-      firstName: "Bharath",
-      lastName: "D",
-      email: "bharath.com",
-      password: "sjit",
-      phoneNumber: 9344816453,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: hashedPassword,
+      phoneNumber: phoneNumber,
     });
     newSignup.save();
-    console.log("Signup successful");
-    res.status(201).json({ message: "signup successfull", isSignup: true });
+    console.log("Signup Successful");
+    res.status(201).json({ message: "Signup Successful", isSignUp: true });
   } catch (error) {
     console.log(error);
-    res.status(201).json({ message: "signup unsuccessfull", isSignup: false });
+    res.status(400).json({ message: "Signup Unsuccessful", isSignUp: false });
   }
 });
-
-app.listen(PORT, () => console.log("Server Started successfully."));
+app.listen(PORT, () => {
+  console.log("Server Started Successfully");
+});
