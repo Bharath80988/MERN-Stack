@@ -1,58 +1,90 @@
-import { Link } from 'react-router-dom'
-import '../css/signup.css'
-
-const Signup = ()=>{
-    return(
-        <div className="signup-container">
-        <form>
-            <div className="input-group">
-                <label>First Name</label>
-                <input type="text" placeholder="Enter your first name" required />
-            </div>
-
-            <div className="input-group">
-                <label>Last Name</label>
-                <input type="text" placeholder="Enter your last name" required />
-            </div>
-
-            <div className="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required />
-            </div>
-
-            <div className="input-group">
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password" required />
-            </div>
-
-            <div className="input-group">
-                <label>Confirm Password</label>
-                <input type="password" placeholder="Confirm your password" required />
-            </div>
-
-            <div className="input-group">
-                <label>Date of Birth</label>
-                <input type="date" required />
-            </div>
-
-            <div className="input-group">
-                <label>Mobile Number</label>
-                <input type="tel" placeholder="Enter your mobile number" required />
-            </div>
-
-            <div className="input-group">
-                <label>Gender</label>
-                <div className="gender-options">
-                    <input type="radio" name="gender" required /> Male
-                    <input type="radio" name="gender" required /> Female
-                    <input type="radio" name="gender" required /> Other
-                </div>
-            </div>
-
-            <button type="submit">Sign Up</button>
+import { useState } from "react";
+import axios from "axios";
+import "../css/SignUp.css";
+import { Link } from "react-router-dom";
+import login from "./login"
+function SignUp() {
+  const [firstName, setFN] = useState("");
+  const [lastName, setLN] = useState("");
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [mobile, setMob] = useState();
+  const handleSignup = (event) => {
+    event.preventDefault();
+    axios.post("http://localhost:3001/signup", {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      pass: pass,
+      mobile: mobile,
+    });
+  };
+  return (
+    <div>
+      <div className="outerbox">
+        <h2>SignUp</h2>
+        <form onSubmit={handleSignup}>
+          First Name
+          <br />
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => {
+              setFN(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          Last Name
+          <br />
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => {
+              setLN(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          Email
+          <br />
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          Mobile Number <br />
+          <input
+            type="number"
+            value={mobile}
+            onChange={(e) => {
+              setMob(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          Password <br />
+          <input
+            type="password"
+            value={pass}
+            onChange={(e) => {
+              setPass(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          <button type="submit">Submit</button>
         </form>
-        <p>Aleready Have an account ? <Link to='/login'>Login</Link></p>
+        <br />
+        <div>
+          Already having an account? <Link to="/login">Login</Link>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
-export default Signup
+export default SignUp;
