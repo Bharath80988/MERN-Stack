@@ -14,7 +14,7 @@ app.use(cors());
 const PORT = 2000;
 
 mdb
-  .connect(process.env.MONGODB_URL,{ useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGODB_URL)
   .then(() => console.log("MDB Connection Successful"))
   .catch((err) => console.log("Check your connection string", err));
 
